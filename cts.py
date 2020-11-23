@@ -19,12 +19,12 @@ activeDiscord = False
 
 client = commands.Bot(command_prefix='>')
 
-token = 'Nzc3MTUwMjMxNTQzNTQ1ODg3.X6_PjQ.s3_NwHkHCfn_EP6gcPT93kafpqs'
+token = 'your_token'
 
 status = ['to Bang!', 'lost!', 'for a new girl', 'to jack off']
 greetings = ['wassup nigga', "how's it hanging", 'fuck off', 'yo dumbass']
 
-channel  = discord.Object(id='776916632483397664')
+
 
 
 @client.event
