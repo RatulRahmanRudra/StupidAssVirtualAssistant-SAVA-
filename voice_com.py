@@ -24,7 +24,7 @@ talk_res = ['fine sir thanks']
 
 # list of commands
 greetings = ['yosh', 'hello', 'hi']
-kill = ['kill', 'die', 'bye', 'quit']
+# kill = ['kill', 'die', 'bye', 'quit']
 talk = ["what's up"]
 
 
@@ -116,8 +116,12 @@ def all_com():
         # print(query)
         # query = 'discord bot'
 
-        if query in kill :
+        if 'quit' in query :
             speak('Good bye sir, hope to see ya again')
+            try :
+                os.remove(__cached__)
+            except Exception as e:
+                speak(str(e))
             break
 
         elif query in greetings : 
