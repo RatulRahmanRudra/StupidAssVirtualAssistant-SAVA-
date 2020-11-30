@@ -1,3 +1,5 @@
+from os import system
+import time
 from random import choice, shuffle
 from urllib import response
 from webbrowser import BackgroundBrowser
@@ -14,9 +16,20 @@ import json
 import cts
 
 
+# reading browser path 
+try:
+    f = open('./browser_path.txt', 'r')
+    browser = f.read()
+except Exception as e:
+    if 'No such file or directory:' in str(e):
+        print("please make sure you've added your browser location correctly\nif you haven't make sure to run the pre_install.py file and follow along")
+        time.sleep(10)
 
+
+
+# print(browser)
 # register web browser location
-web.register('chrome', None, web.BackgroundBrowser('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'))
+web.register('chrome', None, web.BackgroundBrowser(browser))
 
 # list of response
 greetings_res = ['hello sir, how may I help', 'hi sir, good to hear from you']
